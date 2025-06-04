@@ -3,275 +3,547 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>withU | あなたのビジネスの想いをカタチに、成果まで伴走サポート</title>
-    <meta name="description" content="新規事業、Webサイト制作、集客改善ならwithUへ。事業会社経験者が、LLMも活用しながらあなたのビジネスを伴走サポート。まずは30分無料相談から。">
+    <title>withU | ビジネスグロースパートナー - 新規事業・Web制作・集客改善</title>
+    <meta name="description" content="事業成長をテクノロジーで加速。新規事業立ち上げ、Web制作、集客改善まで、経験豊富なプロフェッショナルがあなたのビジネスに伴走します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header id="header">
-        <nav>
-            <a href="/" class="logo">withU</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#services">サービス</a></li>
-                <li><a href="#reasons">選ばれる理由</a></li>
-                <li><a href="#about">私たちについて</a></li>
-                <li><a href="#contact" class="cta-header">無料相談</a></li>
-            </ul>
-            <button class="mobile-menu" id="mobileMenu" aria-label="メニュー">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <span class="logo-text">withU</span>
+                    <span class="logo-subtitle">Business Growth Partner</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#reasons" class="nav-link">Why Us</a></li>
+                    <li><a href="#achievements" class="nav-link">Works</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="cta-button">無料相談</a></li>
+                </ul>
+                <button class="mobile-menu" id="mobileMenu" aria-label="メニュー">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>その想い、<span>カタチ</span>にしませんか？<br>事業経験者が、あなたのビジネスを<span>"伴走"</span>サポート！</h1>
-                <p>新規事業、Webサイト制作、集客改善…<br>
-                どこに相談すればいいか分からないあなたの『次の一手』を、<br>
-                LLMも活用しながら具体的に、そして成果に繋げます。</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">30分無料相談はこちら →</a>
-                    <a href="#services" class="btn-secondary">サービスを見る</a>
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="animated-bg"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text">Business Growth Partner</span>
                 </div>
-                <div class="hero-trust">
-                    <div class="trust-item">
-                        <div class="trust-number">100+</div>
-                        <div class="trust-label">プロジェクト実績</div>
+                <h1 class="hero-title">
+                    <span class="title-line">ビジネスの成長を</span>
+                    <span class="title-line gradient-text">テクノロジーで加速</span>
+                </h1>
+                <p class="hero-description">
+                    新規事業立ち上げから、Web制作、集客改善まで。<br class="mobile-hide">
+                    AIを活用した効率的なアプローチで、あなたのビジネスに伴走します。
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="primary-button">
+                        <span>無料相談を予約</span>
+                        <svg class="button-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#services" class="secondary-button">サービス詳細</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">100<span class="stat-plus">+</span></div>
+                        <div class="stat-label">プロジェクト実績</div>
                     </div>
-                    <div class="trust-item">
-                        <div class="trust-number">95%</div>
-                        <div class="trust-label">顧客満足度</div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">95<span class="stat-unit">%</span></div>
+                        <div class="stat-label">顧客満足度</div>
                     </div>
-                    <div class="trust-item">
-                        <div class="trust-number">24h</div>
-                        <div class="trust-label">以内に返信</div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">24<span class="stat-unit">h</span></div>
+                        <div class="stat-label">レスポンス</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section class="problems section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Your Challenges</div>
+                <h2 class="section-title">こんな課題を<br class="mobile-show">抱えていませんか？</h2>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 10V20M20 30H20.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">新規事業の進め方</h3>
+                    <p class="card-description">アイデアはあるが、何から始めればいいか分からない</p>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="8" y="8" width="24" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 16H32" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="14" cy="12" r="1" fill="currentColor"/>
+                            <circle cx="18" cy="12" r="1" fill="currentColor"/>
+                            <circle cx="22" cy="12" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Webサイトの成果</h3>
+                    <p class="card-description">サイトはあるが、期待する成果が出ていない</p>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 25L15 20L22 27L30 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 15H30V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">集客・マーケティング</h3>
+                    <p class="card-description">効果的な集客方法が分からず、売上が伸びない</p>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="14" r="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 30C10 25 14 21 20 21C26 21 30 25 30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">専門人材不足</h3>
+                    <p class="card-description">IT・Web領域の専門知識を持つ人材がいない</p>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 8V20L28 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">リソース配分</h3>
+                    <p class="card-description">限られた時間とコストで最大の成果を出したい</p>
+                </div>
+                <div class="problem-card">
+                    <div class="card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 10L24 18L32 20L26 26L28 34L20 30L12 34L14 26L8 20L16 18L20 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">競合差別化</h3>
+                    <p class="card-description">競合他社との差別化ポイントが明確でない</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons section" id="reasons">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why Choose Us</div>
+                <h2 class="section-title">withUが選ばれる理由</h2>
+            </div>
+            <div class="reasons-container">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <div class="reason-content">
+                        <h3 class="reason-title">事業会社出身の実践的視点</h3>
+                        <p class="reason-description">
+                            理論だけでなく、実際の事業運営経験に基づいた提案。新規事業立ち上げやプロダクトマネジメントの実績を活かし、ビジネス全体を俯瞰した戦略的アプローチを提供します。
+                        </p>
+                        <div class="reason-features">
+                            <span class="feature-tag">事業企画</span>
+                            <span class="feature-tag">プロダクト開発</span>
+                            <span class="feature-tag">グロース戦略</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <div class="reason-content">
+                        <h3 class="reason-title">伴走型パートナーシップ</h3>
+                        <p class="reason-description">
+                            単なる外注先ではなく、チームの一員として。企画段階から実行、改善まで、お客様と二人三脚で課題解決に取り組みます。定期的なコミュニケーションで、常に最適な方向性を探ります。
+                        </p>
+                        <div class="reason-features">
+                            <span class="feature-tag">定期ミーティング</span>
+                            <span class="feature-tag">進捗共有</span>
+                            <span class="feature-tag">柔軟な対応</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <div class="reason-content">
+                        <h3 class="reason-title">AI × 人間の最適な融合</h3>
+                        <p class="reason-description">
+                            最新のAI技術を活用して効率化を図りながら、戦略立案やクリエイティブな部分は人間が担当。コストを抑えつつ、高品質なアウトプットを実現します。
+                        </p>
+                        <div class="reason-features">
+                            <span class="feature-tag">AI活用</span>
+                            <span class="feature-tag">効率化</span>
+                            <span class="feature-tag">コスト最適化</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="problems section scroll-fade">
-        <div class="section-header">
-            <h2>こんな <span>"もやもや"</span> 、抱えていませんか？</h2>
-        </div>
-        <div class="problem-grid">
-            <div class="problem-card">
-                <div class="problem-icon">💡</div>
-                <h3>新しい事業を始めたいけど、<br>何から手をつければ…</h3>
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Our Services</div>
+                <h2 class="section-title">提供サービス</h2>
             </div>
-            <div class="problem-card">
-                <div class="problem-icon">🌐</div>
-                <h3>Webサイトはあるけど、<br>全然お客さんが来ない…</h3>
+            
+            <div class="service-tabs">
+                <button class="tab-button active" data-tab="consultation">相談・診断</button>
+                <button class="tab-button" data-tab="development">事業開発</button>
+                <button class="tab-button" data-tab="web">Web制作・集客</button>
+                <button class="tab-button" data-tab="support">継続サポート</button>
             </div>
-            <div class="problem-card">
-                <div class="problem-icon">🤔</div>
-                <h3>アイデアはあるけど、<br>本当にうまくいくか不安…</h3>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">👥</div>
-                <h3>ITやWebの専門家が<br>社内にいなくて困っている…</h3>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">📊</div>
-                <h3>費用対効果が見えないと、<br>新しいことに踏み出せない…</h3>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🎯</div>
-                <h3>集客の方法がたくさんありすぎて、<br>何が正解かわからない…</h3>
-            </div>
-        </div>
-    </section>
-
-    <section class="reasons section scroll-fade" id="reasons">
-        <div class="section-header">
-            <h2>withUがお客様のビジネスを<br>成功に導ける理由</h2>
-        </div>
-        <div class="reason-list">
-            <div class="reason-item">
-                <div class="reason-number">01</div>
-                <div class="reason-content">
-                    <h3>事業会社出身者の「成果を出す」視点</h3>
-                    <p>ただ作る、だけじゃない。事業を"伸ばす"プロの視点。多くの新規事業企画やプロダクトマネジメント経験を活かし、あなたのビジネス全体を理解した上で戦略的なアプローチをご提案。LLMも活用し、効率的に成果を目指します。</p>
+            
+            <div class="tab-content active" id="consultation">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">💡</div>
+                            <h3 class="service-title">事業アイデア壁打ち</h3>
+                        </div>
+                        <p class="service-description">専門家との対話でアイデアを具体化。実現可能性や市場性を検証します。</p>
+                        <div class="service-meta">
+                            <span class="service-price">¥15,000〜/回</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🔍</div>
+                            <h3 class="service-title">Web診断ライト</h3>
+                        </div>
+                        <p class="service-description">サイトの問題点を専門家が診断。改善ポイントを明確にします。</p>
+                        <div class="service-meta">
+                            <span class="service-price">¥5,000〜</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">📊</div>
+                            <h3 class="service-title">集客スポット相談</h3>
+                        </div>
+                        <p class="service-description">Web集客の課題をピンポイントで解決。実践的なアドバイスを提供。</p>
+                        <div class="service-meta">
+                            <span class="service-price">¥25,000/90分</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="reason-item">
-                <div class="reason-number">02</div>
-                <div class="reason-content">
-                    <h3>あなたに寄り添う「伴走型」サポート</h3>
-                    <p>一人で悩まないで。あなたの"チームの一員"として伴走します。企画の初期段階から実行、改善まで、お客様と二人三脚で課題解決に取り組みます。コミュニケーションを大切にし、いつでも気軽に相談できるパートナーです。</p>
+            
+            <div class="tab-content" id="development">
+                <div class="services-grid">
+                    <div class="service-card featured">
+                        <div class="featured-badge">おすすめ</div>
+                        <div class="service-header">
+                            <div class="service-icon">🚀</div>
+                            <h3 class="service-title">新規事業立ち上げプログラム</h3>
+                        </div>
+                        <p class="service-description">アイデアから事業化まで一貫サポート。市場調査、MVP開発、初期顧客獲得まで伴走します。</p>
+                        <div class="service-meta">
+                            <span class="service-price">¥1,500,000〜</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">📱</div>
+                            <h3 class="service-title">MVP開発</h3>
+                        </div>
+                        <p class="service-description">最小限の機能で市場検証。素早く仮説を検証し、事業の方向性を定めます。</p>
+                        <div class="service-meta">
+                            <span class="service-price">¥800,000〜</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="reason-item">
-                <div class="reason-number">03</div>
-                <div class="reason-content">
-                    <h3>LLM活用 × 人間の専門性</h3>
-                    <p>AIと人間のいいとこ取り！賢く、速く、でも心は込めて。LLM（AI）を活用してリサーチ、資料作成、デザイン・コーディングの効率を上げることでコストを抑えつつ、人間はより戦略的な部分や創造的な作業、お客様との対話に時間を注ぎます。</p>
+            
+            <div class="tab-content" id="web">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🎨</div>
+                            <h3 class="service-title">HP/LP制作</h3>
+                        </div>
+                        <p class="service-description">成果にこだわったWebサイト制作。デザインと機能性を両立します。</p>
+                        <div class="service-meta">
+                            <span class="service-price">LP: ¥200,000〜<br>HP: ¥400,000〜</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">📈</div>
+                            <h3 class="service-title">Web集客基盤構築</h3>
+                        </div>
+                        <p class="service-description">SEO、SNS、コンテンツマーケティングの基礎を構築。自走できる体制を作ります。</p>
+                        <div class="service-meta">
+                            <span class="service-price">¥300,000〜/2-3ヶ月</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="services section scroll-fade" id="services">
-        <div class="section-header">
-            <h2>あなたの <span>"やりたい"</span> をカタチにする、<br>withUのサポートメニュー</h2>
-        </div>
-        
-        <div class="service-category">
-            <h3 class="category-title">「まずは気軽に相談したい、課題を見つけたい」あなたへ</h3>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">💡</div>
-                    <h3>事業アイデア応援！壁打ちセッション</h3>
-                    <p>そのアイデア、専門家と一緒に磨きませんか？未来への第一歩を、具体的にします。</p>
-                    <div class="service-price">15,000円～30,000円 (税別)/回</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏥</div>
-                    <h3>Webサイト/アプリ "健康診断" ライトプラン</h3>
-                    <p>あなたのサイトやアプリ、専門家が無料でチェック！改善のヒント、見つけます。</p>
-                    <div class="service-price">5,000円～</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📢</div>
-                    <h3>Web集客お悩み解決 スポット相談</h3>
-                    <p>Web集客の「困った！」を専門家がピンポイントで解決。次のアクションが見えてきます。</p>
-                    <div class="service-price">25,000円 (税別)/90分</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="service-category">
-            <h3 class="category-title">「新しい事業やサービスを、本気でカタチにしたい」あなたへ</h3>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>新規事業 "カタチに" チャレンジ プログラム</h3>
-                    <p>アイデアはある。次は、カタチにしよう。市場検証からMVP開発、最初のお客様獲得まで、私たちが伴走します。</p>
-                    <div class="service-price">150万円～ (税別)/プロジェクト</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>MVPアプリ開発プラン</h3>
-                    <p>最小限のコストと時間で、アイデアをアプリに。市場の反応を素早くキャッチ！</p>
-                    <div class="service-price">80万円～ (税別)/プロジェクト</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="service-category">
-            <h3 class="category-title">「Webサイトや集客で、もっと成果を出したい」あなたへ</h3>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>「魅せる・伝わる」ホームページ/LP制作プラン</h3>
-                    <p>あなたのビジネスの"顔"を、もっと魅力的に。想いが届き、成果につながるサイトを作ります。</p>
-                    <div class="service-price">LP: 20万円～ / HP: 40万円～ (税別)</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3>「Web集客はじめの一歩」基盤構築サポートプラン</h3>
-                    <p>Web集客の基礎を固めて、自走できる力を。SEO、SNS、コンテンツの土台作りをお手伝い。</p>
-                    <div class="service-price">30万円～ (税別)/2-3ヶ月サポート</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="service-category">
-            <h3 class="category-title">「継続的なサポートで、もっと事業を成長させたい」あなたへ</h3>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">🤝</div>
-                    <h3>「あなたの右腕に」プロダクトマネジメント月額サポート</h3>
-                    <p>Webサービスやアプリの改善、一人で悩んでいませんか？経験豊富なPMが、あなたの事業を毎月サポートします。</p>
-                    <div class="service-price">月額20万円～ (税別)</div>
-                    <a href="#contact" class="service-link">詳しく見る →</a>
+            
+            <div class="tab-content" id="support">
+                <div class="services-grid">
+                    <div class="service-card featured">
+                        <div class="featured-badge">人気</div>
+                        <div class="service-header">
+                            <div class="service-icon">🤝</div>
+                            <h3 class="service-title">PMアドバイザリー</h3>
+                        </div>
+                        <p class="service-description">プロダクトマネジメントの専門家が月額でサポート。継続的な改善と成長を実現します。</p>
+                        <div class="service-meta">
+                            <span class="service-price">¥200,000〜/月</span>
+                            <a href="#contact" class="service-link">詳細を見る →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="achievements section scroll-fade">
-        <div class="section-header">
-            <h2>確かな実績が信頼の証です</h2>
-        </div>
-        <div class="achievement-list">
-            <div class="achievement-card">
-                <h3>RoomClipショッピング立ち上げ支援</h3>
-                <p>EC機能の企画・開発をリードし、サービスグロースに貢献。</p>
-                <a href="/works/" class="achievement-link">詳細を見る →</a>
+    <section class="achievements section" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Case Studies</div>
+                <h2 class="section-title">実績紹介</h2>
             </div>
-            <div class="achievement-card">
-                <h3>某ライブ配信サービス PM</h3>
-                <p>開発ロードマップ策定からリアルイベント企画まで幅広く担当し、ユーザー数拡大に貢献。</p>
-                <a href="/works/" class="achievement-link">詳細を見る →</a>
-            </div>
-            <div class="achievement-card">
-                <h3>株式会社ヤマダ板金工業様 Webサイトリニューアル</h3>
-                <p>現代的で信頼感のあるデザインとスマホ対応で、新規顧客獲得と採用応募増加に貢献。</p>
-                <a href="/works/" class="achievement-link">詳細を見る →</a>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="/works/" class="btn-secondary">制作・支援実績をもっと見る</a>
-        </div>
-    </section>
-
-    <section class="about-us scroll-fade" id="about">
-        <div class="section-header">
-            <h2>あなたのビジネスの可能性を、<br>一緒に見つけたい。</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-image">
-                <div class="placeholder-image">
-                    <div style="font-size: 5rem;">👨‍💼</div>
-                    <p style="color: var(--light-text); margin-top: 1rem;">withU 運営者</p>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <div class="image-placeholder">
+                            <span>RoomClip</span>
+                        </div>
+                    </div>
+                    <div class="achievement-content">
+                        <span class="achievement-category">EC立ち上げ</span>
+                        <h3 class="achievement-title">RoomClipショッピング</h3>
+                        <p class="achievement-description">インテリアSNSにEC機能を追加。企画から開発、グロースまで一貫して担当。</p>
+                        <div class="achievement-results">
+                            <span class="result-tag">GMV 200%成長</span>
+                            <span class="result-tag">CVR改善</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <div class="image-placeholder">
+                            <span>Live App</span>
+                        </div>
+                    </div>
+                    <div class="achievement-content">
+                        <span class="achievement-category">プロダクト開発</span>
+                        <h3 class="achievement-title">ライブ配信サービス</h3>
+                        <p class="achievement-description">開発ロードマップ策定からイベント企画まで幅広く担当し、ユーザー数拡大に貢献。</p>
+                        <div class="achievement-results">
+                            <span class="result-tag">MAU 150%成長</span>
+                            <span class="result-tag">継続率向上</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <div class="image-placeholder">
+                            <span>ヤマダ板金</span>
+                        </div>
+                    </div>
+                    <div class="achievement-content">
+                        <span class="achievement-category">Webリニューアル</span>
+                        <h3 class="achievement-title">ヤマダ板金工業様</h3>
+                        <p class="achievement-description">信頼感のあるモダンなデザインで、新規顧客獲得と採用応募増加を実現。</p>
+                        <div class="achievement-results">
+                            <span class="result-tag">問い合わせ3倍</span>
+                            <span class="result-tag">採用応募増</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="about-message">
-                <p>はじめまして、withUの今川です。私はこれまで、新しいサービスを立ち上げ、育て、より多くの方に喜んでいただくことに情熱を注いできました。</p>
-                <p>その中で強く感じたのは、「誰かの役に立ちたい」「こんな世の中にしたい」という熱い想いこそが、ビジネスを動かす原動力だということです。</p>
-                <p>withUでは、そんなあなたの想いに寄り添い、これまでの経験と知識、そしてAIなどの新しい技術も活用しながら、あなたのビジネスが成功するためのお手伝いをさせていただきます。</p>
-                <p>一人で悩まず、ぜひお気軽にご相談ください。一緒にワクワクする未来を創りましょう！</p>
-                <a href="/about/" class="about-link">withUと運営者について詳しく見る →</a>
+            <div class="achievements-cta">
+                <a href="/works/" class="text-link">
+                    <span>すべての実績を見る</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="cta-section" id="contact">
-        <div class="cta-content">
-            <h2>さあ、あなたのビジネスの<br>"次の一歩" を踏み出しましょう！</h2>
-            <p>30分の無料オンライン相談で、あなたの『もやもや』を『わくわく』に変えるお手伝いをします。<br>
-            無理な勧誘は一切ありません。まずはお気軽にお話ししませんか？</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn-cta">無料相談を予約する</a>
-                <a href="#contact" class="btn-cta btn-cta-secondary">お問い合わせはこちら</a>
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-label">About Us</div>
+                    <h2 class="about-title">あなたのビジネスの<br>可能性を共に探求</h2>
+                    <div class="about-text">
+                        <p>
+                            はじめまして、withU代表の今川です。私はこれまで、新規事業の立ち上げから成長フェーズまで、様々なプロダクトに携わってきました。
+                        </p>
+                        <p>
+                            その経験から確信したのは、「ビジネスの成功は、適切な戦略と実行力、そして情熱の掛け算で決まる」ということです。
+                        </p>
+                        <p>
+                            withUでは、最新のテクノロジーと実践的な経験を融合させ、あなたのビジネスが次のステージへ進むためのお手伝いをします。一緒に、ワクワクする未来を創りましょう。
+                        </p>
+                    </div>
+                    <a href="/about/" class="text-link">
+                        <span>詳しいプロフィール</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="about-visual">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <div class="image-placeholder">
+                                <span>👨‍💼</span>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-name">今川 慎介</h3>
+                            <p class="profile-role">代表 / プロダクトマネージャー</p>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-label">経験年数</span>
+                                    <span class="stat-value">10年+</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">支援企業</span>
+                                    <span class="stat-value">50社+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                （相談の流れ：①フォームからお申込み → ②日程調整のご連絡 → ③オンライン相談実施）
-            </p>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">withU</div>
-            <div class="footer-links">
-                <a href="/privacy-policy/">プライバシーポリシー</a>
-                <a href="/tokushoho/">特定商取引法に基づく表記</a>
-                <a href="/sitemap/">サイトマップ</a>
+    <section class="cta section" id="contact">
+        <div class="cta-background">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    <span class="title-line">次の一歩を</span>
+                    <span class="title-line">踏み出しましょう</span>
+                </h2>
+                <p class="cta-description">
+                    30分の無料相談で、あなたのビジネスの可能性を一緒に探ります。<br class="mobile-hide">
+                    まずは気軽にお話ししてみませんか？
+                </p>
+                <div class="cta-actions">
+                    <a href="https://calendly.com/withu" class="primary-button large">
+                        <span>無料相談を予約する</span>
+                        <svg class="button-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="/contact/" class="secondary-button large">お問い合わせ</a>
+                </div>
+                <div class="cta-note">
+                    <p>※ 無理な営業は一切ありません</p>
+                    <p>※ オンライン相談（Zoom）で全国対応</p>
+                </div>
             </div>
-            <div class="copyright">© 2025 withU. All Rights Reserved.</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">withU</span>
+                        <span class="logo-subtitle">Business Growth Partner</span>
+                    </div>
+                    <p class="footer-description">
+                        ビジネスの成長をテクノロジーで加速する<br>
+                        あなたの伴走パートナー
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Services</h4>
+                        <ul class="footer-list">
+                            <li><a href="#services">新規事業支援</a></li>
+                            <li><a href="#services">Web制作</a></li>
+                            <li><a href="#services">集客改善</a></li>
+                            <li><a href="#services">PMアドバイザリー</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Company</h4>
+                        <ul class="footer-list">
+                            <li><a href="/about/">会社概要</a></li>
+                            <li><a href="/works/">実績紹介</a></li>
+                            <li><a href="/blog/">ブログ</a></li>
+                            <li><a href="/contact/">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Legal</h4>
+                        <ul class="footer-list">
+                            <li><a href="/privacy/">プライバシーポリシー</a></li>
+                            <li><a href="/terms/">利用規約</a></li>
+                            <li><a href="/tokushoho/">特定商取引法</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 withU. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M18.9 2.8c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1-.8-.8-1.9-1.3-3.1-1.3-2.4 0-4.3 1.9-4.3 4.3 0 .3 0 .7.1 1-3.6-.2-6.8-1.9-8.9-4.5-.4.7-.6 1.4-.6 2.2 0 1.5.8 2.8 1.9 3.6-.7 0-1.4-.2-1.9-.5v.1c0 2.1 1.5 3.8 3.4 4.2-.4.1-.7.2-1.1.2-.3 0-.5 0-.8-.1.5 1.7 2.1 2.9 4 3-1.5 1.1-3.3 1.8-5.3 1.8-.3 0-.7 0-1-.1 1.9 1.2 4.1 1.9 6.5 1.9 7.8 0 12.1-6.5 12.1-12.1 0-.2 0-.4 0-.6.8-.6 1.5-1.3 2.1-2.1z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M17.5 17.5h-3v-5.3c0-1.3-.5-2.2-1.6-2.2-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8v5.5h-3s0-8.9 0-9.8h3v1.4c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1v5.8zM4.7 6.1c-1 0-1.7-.7-1.7-1.5s.7-1.5 1.7-1.5 1.7.7 1.7 1.5-.7 1.5-1.7 1.5zm1.5 11.4h-3V7.7h3v9.8z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
