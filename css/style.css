@@ -1236,6 +1236,24 @@ header.scrolled {
     .hero-content {
         padding: 2rem 0;
     }
+
+        /* 背景画像のモバイル対応 */
+    .hero-background {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+
+    .hero-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/01_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll !important;
+    opacity: 0.6;
+    }
     
     .hero-badge {
         font-size: 0.875rem;
