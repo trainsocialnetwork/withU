@@ -258,10 +258,24 @@ header.scrolled {
     z-index: -1;
 }
 
+.hero-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.1;
+}
+
 .gradient-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    background: linear-gradient(135deg, 
+        rgba(248, 250, 252, 0.95) 0%, 
+        rgba(241, 245, 249, 0.9) 50%,
+        rgba(248, 250, 252, 0.85) 100%);
 }
 
 .animated-bg {
