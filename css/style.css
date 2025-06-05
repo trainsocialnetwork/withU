@@ -262,11 +262,11 @@ header.scrolled {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');
+    background-image: url('../images/01_hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 .gradient-overlay {
