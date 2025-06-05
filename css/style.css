@@ -252,11 +252,17 @@ header.scrolled {
     padding-top: 80px;
 }
 
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
 .hero-background::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../image/01_hero.jpg');
+    background-image: url('../images/01_hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
