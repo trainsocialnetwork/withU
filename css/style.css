@@ -1236,10 +1236,6 @@ header.scrolled {
         inset: 0;
         z-index: -1;
     }
-    
-    .hero-background::before {
-        background-attachment: scroll !important;
-    }
 
     .hero-background::before {
     content: '';
@@ -1248,8 +1244,8 @@ header.scrolled {
     background-image: url('../images/01_hero.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    opacity: 0.8;
+    background-attachment: scroll !important;
+    opacity: 0.5;
     }
     
     .hero-content {
