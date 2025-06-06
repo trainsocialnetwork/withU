@@ -40,10 +40,47 @@
     animation: float 20s ease-in-out infinite;
 }
 
+/* デザイン要素（site-check.html用） */
+.design-elements {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.design-element {
+    position: absolute;
+    opacity: 0.1;
+}
+
+.browser-mockup {
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    border-radius: 8px;
+    top: 20%;
+    right: -100px;
+    transform: rotate(-15deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-mockup {
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+    border-radius: 20px;
+    bottom: 10%;
+    left: -50px;
+    transform: rotate(15deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
 .service-hero-content {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .service-hero-badge {
@@ -56,6 +93,8 @@
     border-radius: var(--radius-full);
     margin-bottom: 2rem;
     animation: fadeInUp 0.8s ease-out;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .badge-icon {
@@ -75,6 +114,7 @@
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    line-height: 1.1;
 }
 
 .service-hero-description {
@@ -83,6 +123,9 @@
     line-height: 1.7;
     margin-bottom: 2.5rem;
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ターゲット顧客セクション */
@@ -106,6 +149,7 @@
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .target-card::before {
@@ -141,11 +185,19 @@
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: var(--secondary);
+    transition: all var(--transition-base);
+}
+
+.target-card:hover .target-icon {
+    background: var(--gradient-primary);
+    color: white;
+    transform: scale(1.1);
 }
 
 .target-card p {
     color: var(--text-secondary);
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* サービス内容セクション */
@@ -165,6 +217,8 @@
 .service-features {
     display: grid;
     gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .service-feature {
@@ -178,6 +232,7 @@
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .service-feature::before {
@@ -214,6 +269,7 @@
     font-weight: 700;
     font-size: 1.25rem;
     flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .feature-content h3 {
@@ -221,11 +277,13 @@
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--primary);
+    line-height: 1.3;
 }
 
 .feature-content p {
     color: var(--text-secondary);
     line-height: 1.7;
+    font-size: 1rem;
 }
 
 /* 価格セクション */
@@ -238,18 +296,20 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .pricing-card {
     background: var(--bg-primary);
-    border: 1px solid var(--border-light);
+    border: 2px solid var(--border-light);
     border-radius: var(--radius-xl);
     padding: 2.5rem;
     text-align: center;
     transition: all var(--transition-base);
     position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .pricing-card:hover {
@@ -258,11 +318,15 @@
     border-color: var(--secondary);
 }
 
+.pricing-card.featured,
 .pricing-card.recommended {
     border-color: var(--secondary);
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
 }
 
+.pricing-card.featured::before,
 .pricing-card.recommended::before {
     content: 'おすすめ';
     position: absolute;
@@ -274,6 +338,20 @@
     font-size: 0.75rem;
     font-weight: 600;
     border-radius: var(--radius-full);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.375rem 0.875rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 .pricing-title {
@@ -288,12 +366,35 @@
     font-weight: 800;
     color: var(--secondary);
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.price-unit {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
 }
 
 .pricing-price small {
     font-size: 1rem;
     font-weight: 400;
     color: var(--text-secondary);
+}
+
+.pricing-duration {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.pricing-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .pricing-features {
@@ -310,6 +411,7 @@
     gap: 0.75rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 .pricing-features li::before {
@@ -319,19 +421,40 @@
     flex-shrink: 0;
 }
 
+.check-icon {
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
 .pricing-features li:last-child {
     border-bottom: none;
 }
 
-.pricing-card .primary-button {
+.pricing-card .primary-button,
+.pricing-card .secondary-button {
     width: 100%;
     justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.pricing-note {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 追加料金セクション */
 .addon-section {
     margin-top: 3rem;
     text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .addon-section h3 {
@@ -344,10 +467,25 @@
     list-style: none;
     color: var(--text-secondary);
     line-height: 2;
+    text-align: left;
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
 }
 
 .addon-list li {
     padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.addon-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
 }
 
 /* フローセクション */
@@ -360,6 +498,18 @@
     gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+}
+
+.flow-steps::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 50px;
+    bottom: 50px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--border-light), var(--secondary), var(--border-light));
+    opacity: 0.3;
 }
 
 .flow-step {
@@ -367,12 +517,13 @@
     grid-template-columns: auto 1fr;
     gap: 1.5rem;
     align-items: start;
+    position: relative;
 }
 
 .flow-number {
     width: 50px;
     height: 50px;
-    background: var(--bg-tertiary);
+    background: var(--bg-primary);
     border: 2px solid var(--secondary);
     border-radius: var(--radius-full);
     display: flex;
@@ -382,10 +533,28 @@
     color: var(--secondary);
     font-size: 1.125rem;
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    transition: all var(--transition-base);
+}
+
+.flow-step:hover .flow-number {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: transparent;
+    transform: scale(1.1);
 }
 
 .flow-content {
     padding-top: 0.75rem;
+}
+
+.flow-content h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
 }
 
 .flow-content p {
@@ -412,10 +581,16 @@
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-base);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .faq-item:hover {
     box-shadow: var(--shadow);
+}
+
+.faq-item.active {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-md);
 }
 
 .faq-question {
@@ -427,6 +602,7 @@
     align-items: center;
     transition: background var(--transition-base);
     color: var(--primary);
+    gap: 1rem;
 }
 
 .faq-question:hover {
@@ -436,6 +612,7 @@
 .faq-icon {
     transition: transform var(--transition-base);
     flex-shrink: 0;
+    color: var(--secondary);
 }
 
 .faq-item.active .faq-icon {
@@ -474,6 +651,14 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
+    animation: float 15s ease-in-out infinite;
+}
+
+.service-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid2" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid2)"/></svg>');
 }
 
 .service-cta-content {
@@ -488,6 +673,7 @@
     font-weight: 800;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .service-cta-text {
@@ -502,6 +688,17 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.service-cta .primary-button,
+.service-cta .secondary-button {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-cta .primary-button:hover,
+.service-cta .secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* レスポンシブ */
@@ -528,6 +725,10 @@
     .service-hero-description {
         font-size: 1rem;
         margin-bottom: 2rem;
+    }
+
+    .design-elements {
+        display: none;
     }
 
     .target-cards {
@@ -564,8 +765,13 @@
         padding: 2rem;
     }
 
+    .pricing-card.featured,
     .pricing-card.recommended {
         transform: scale(1);
+    }
+
+    .flow-steps::before {
+        display: none;
     }
 
     .flow-step {
@@ -633,5 +839,32 @@
 
     .pricing-price {
         font-size: 2rem;
+    }
+}
+
+/* アニメーション */
+@keyframes float {
+    0%, 100% { 
+        transform: translate(0, 0) scale(1); 
+        opacity: 0.1;
+    }
+    33% { 
+        transform: translate(30px, -30px) scale(1.05); 
+        opacity: 0.15;
+    }
+    66% { 
+        transform: translate(-20px, 20px) scale(0.95); 
+        opacity: 0.1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
