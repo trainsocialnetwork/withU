@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/conctact-style.css">
+    <link rel="stylesheet" href="css/contact-style.css">
 </head>
 <body>
     <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
@@ -50,7 +50,7 @@
             </div>
         </section>
 
-        <section class="contact-form-section">
+        <section class="contact-form-section" id="contact-form">
             <div class="container">
                 <div class="contact-form-container">
                     <div class="contact-info">
@@ -76,144 +76,38 @@
                         </div>
                     </div>
 
-                    <div class="success-message" id="successMessage">
-                        お問い合わせを受け付けました。24時間以内にご連絡させていただきます。
+                    <!-- Google Forms埋め込み -->
+                    <div class="google-form-container" id="formContainer">
+                        <div class="form-loading">
+                            <div class="spinner"></div>
+                            <p>フォームを読み込んでいます...</p>
+                        </div>
                     </div>
 
-                    <form id="contactForm" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="service" class="form-label">
-                                ご興味のあるサービス <span class="required">*</span>
-                            </label>
-                            <select id="service" name="service" class="form-select" required>
-                                <option value="">選択してください</option>
-                                <optgroup label="相談・診断">
-                                    <option value="idea-session-60">事業アイデア壁打ちプラン（60分）</option>
-                                    <option value="idea-session-90">事業アイデア壁打ちプラン（90分）</option>
-                                    <option value="site-check-free">Web診断プラン（無料）</option>
-                                    <option value="site-check-standard">Web診断プラン（スタンダード）</option>
-                                    <option value="site-check-roadmap">Web診断プラン（ロードマップ）</option>
-                                    <option value="marketing-consult">集客スポット相談</option>
-                                </optgroup>
-                                <optgroup label="事業開発">
-                                    <option value="new-business-program">新規事業立ち上げプログラム</option>
-                                    <option value="mvp-app-development">MVP開発支援</option>
-                                </optgroup>
-                                <optgroup label="Web制作・集客">
-                                    <option value="web-design">HP/LP制作プラン</option>
-                                    <option value="marketing-starter">Web集客基盤構築</option>
-                                </optgroup>
-                                <optgroup label="継続サポート">
-                                    <option value="pm-support">PMアドバイザリー</option>
-                                </optgroup>
-                                <option value="other">その他のご相談</option>
-                            </select>
-                            <span class="error-message" id="serviceError">サービスを選択してください</span>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name" class="form-label">
-                                    お名前 <span class="required">*</span>
-                                </label>
-                                <input type="text" id="name" name="name" class="form-input" required>
-                                <span class="error-message" id="nameError">お名前を入力してください</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="company" class="form-label">会社名</label>
-                                <input type="text" id="company" name="company" class="form-input">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email" class="form-label">
-                                    メールアドレス <span class="required">*</span>
-                                </label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                                <span class="error-message" id="emailError">有効なメールアドレスを入力してください</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">電話番号</label>
-                                <input type="tel" id="phone" name="phone" class="form-input">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contact-method" class="form-label">ご希望の連絡方法</label>
-                            <select id="contact-method" name="contact-method" class="form-select">
-                                <option value="email">メール</option>
-                                <option value="phone">電話</option>
-                                <option value="both">どちらでも</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="current-situation" class="form-label">
-                                現在の課題・状況
-                            </label>
-                            <textarea id="current-situation" name="current-situation" class="form-textarea" 
-                                placeholder="例：新規事業のアイデアはあるが、どう進めていいか分からない"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="requirements" class="form-label">
-                                ご希望・ご要望
-                            </label>
-                            <textarea id="requirements" name="requirements" class="form-textarea" 
-                                placeholder="例：まずは相談から始めたい、具体的な見積もりが欲しい"></textarea>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="budget" class="form-label">ご予算感</label>
-                                <select id="budget" name="budget" class="form-select">
-                                    <option value="">選択してください</option>
-                                    <option value="under-50">～50万円</option>
-                                    <option value="50-100">50万円～100万円</option>
-                                    <option value="100-300">100万円～300万円</option>
-                                    <option value="300-500">300万円～500万円</option>
-                                    <option value="over-500">500万円以上</option>
-                                    <option value="undecided">未定</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="timeline" class="form-label">ご希望の開始時期</label>
-                                <select id="timeline" name="timeline" class="form-select">
-                                    <option value="">選択してください</option>
-                                    <option value="immediately">すぐに</option>
-                                    <option value="1month">1ヶ月以内</option>
-                                    <option value="3months">3ヶ月以内</option>
-                                    <option value="6months">6ヶ月以内</option>
-                                    <option value="undecided">未定</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-checkbox-group">
-                                <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
-                                <label for="privacy" class="form-checkbox-label">
-                                    <a href="/privacy/" target="_blank">プライバシーポリシー</a>に同意する <span class="required">*</span>
-                                </label>
-                            </div>
-                            <span class="error-message" id="privacyError">プライバシーポリシーへの同意が必要です</span>
-                        </div>
-
-                        <div class="form-submit">
-                            <button type="submit" class="primary-button large">
-                                <span>送信する</span>
-                                <svg class="button-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- 代替連絡方法 -->
+                    <div class="alternative-cta">
+                        <h3>その他のお問い合わせ方法</h3>
+                        <p>フォームが表示されない場合や、お急ぎの場合は以下からもご連絡いただけます。</p>
+                        <div class="contact-methods">
+                            <a href="mailto:imachan.0703.tus@gmail.com" class="contact-method">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="16" height="12" rx="2"></rect>
+                                    <path d="M2 6l8 5 8-5"></path>
                                 </svg>
-                            </button>
+                                <span>contact@withu.jp</span>
+                            </a>
+                            <a href="https://calendly.com/withu" class="contact-method" target="_blank" rel="noopener noreferrer">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="14" height="14" rx="2"></rect>
+                                    <line x1="3" y1="8" x2="17" y2="8"></line>
+                                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                                    <line x1="7" y1="2" x2="7" y2="4"></line>
+                                    <line x1="13" y1="2" x2="13" y2="4"></line>
+                                </svg>
+                                <span>オンライン相談を予約</span>
+                            </a>
                         </div>
-
-                        <p class="form-note">
-                            ※ 送信後、自動返信メールをお送りします<br>
-                            ※ 24時間以内に担当者よりご連絡させていただきます
-                        </p>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -255,7 +149,7 @@
                         <h4 class="footer-heading">Company</h4>
                         <ul class="footer-list">
                             <li><a href="/about/">実績紹介</a></li>
-                            <li><a href="/works/">お問い合わせ</a></li>
+                            <li><a href="/contact/">お問い合わせ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -279,6 +173,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src=""js/contact-script.js"></script>
+    <script src="js/contact-script.js"></script>
 </body>
 </html>
