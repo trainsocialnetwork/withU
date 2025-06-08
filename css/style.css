@@ -1269,6 +1269,12 @@ header.scrolled {
         font-size: 1rem;
         margin-bottom: 2rem;
     }
+
+    .stat-plus,
+    .stat-unit {
+    font-size: 0.6rem;
+    color: var(--secondary);
+}
     
     .mobile-hide {
         display: none;
