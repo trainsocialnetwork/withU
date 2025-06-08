@@ -50,12 +50,13 @@
 
 .design-element {
     position: absolute;
-    opacity: 0.1;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+    opacity: 0.05;
 }
 
 .browser-mockup {
-    width: 400px;
-    height: 300px;
+    width: clamp(300px, 40vw, 500px);
+    height: clamp(200px, 30vw, 350px);
     background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
     border-radius: 8px;
     top: 20%;
@@ -65,8 +66,8 @@
 }
 
 .mobile-mockup {
-    width: 200px;
-    height: 400px;
+    width: clamp(150px, 20vw, 250px);
+    height: clamp(300px, 40vw, 500px);
     background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
     border-radius: 20px;
     bottom: 10%;
@@ -588,6 +589,7 @@
 
 .faq-item:hover {
     box-shadow: var(--shadow);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
 }
 
 .faq-item.active {
@@ -847,7 +849,7 @@
     }
 
     .section {
-        padding: 3rem 0;
+        padding: 6rem 0;
     }
 
     .section-header {
