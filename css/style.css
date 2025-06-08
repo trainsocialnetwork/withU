@@ -339,6 +339,7 @@ header.scrolled {
 
 .title-line {
     display: block;
+    color: white;
 }
 
 .hero-description {
@@ -1020,6 +1021,7 @@ header.scrolled {
 
 .cta-title .title-line {
     display: block;
+    color: white;
 }
 
 .cta-description {
