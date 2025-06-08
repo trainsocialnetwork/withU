@@ -6,7 +6,7 @@
             // ==========================================
             // ここにGoogle FormsのiFrame URLを設定
             // ==========================================
-            const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/1Wk68YGugFQLZ-UOeQdAMREEohrvsDTVB6B0vsGHWk1M/preview?embedded=true';
+            const GOOGLE_FORM_URL = 'https://docs.google.com/forms/e/1FAIpQLSdeQxD-A2x-R-jovCpOurK9J9Ocu9tFMoh0Bn37odupDrLeHQ/viewform?embedded=true';
             
             // URLパラメータを取得してサービスを自動選択
             const urlParams = new URLSearchParams(window.location.search);
