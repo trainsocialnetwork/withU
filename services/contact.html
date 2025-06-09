@@ -84,7 +84,11 @@
                         送信に失敗しました。お手数ですが、もう一度お試しください。
                     </div>
 
-                    <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1Wk68YGugFQLZ-UOeQdAMREEohrvsDTVB6B0vsGHWk1M/formResponse" method="POST">
+                    <!-- 非表示のiframe（Google Formのレスポンスを受け取る） -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                    <!-- Google Formを実際に送信するフォーム -->
+                    <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdeQxD-A2x-R-jovCpOurK9J9Ocu9tFMoh0Bn37odupDrLeHQ/formResponse" method="POST" target="hidden_iframe">
                         <div class="form-group">
                             <label for="service" class="form-label">
                                 ご興味のあるサービス <span class="required">*</span>
@@ -231,7 +235,7 @@
                                 </svg>
                                 <span>メールで問い合わせ</span>
                             </a>
-                            <a href="https://docs.google.com/forms/d/e/1Wk68YGugFQLZ-UOeQdAMREEohrvsDTVB6B0vsGHWk1M/viewform" target="_blank" class="contact-method">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeQxD-A2x-R-jovCpOurK9J9Ocu9tFMoh0Bn37odupDrLeHQ/viewform" target="_blank" class="contact-method">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"></path>
                                     <line x1="8" y1="6" x2="12" y2="6"></line>
