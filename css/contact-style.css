@@ -20,6 +20,7 @@
             font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 800;
             margin-bottom: 1rem;
+            color: white;
         }
 
         .contact-hero-description {
