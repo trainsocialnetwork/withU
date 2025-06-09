@@ -1,4 +1,4 @@
-/* Contact Page Specific Styles */
+ /* Contact Page Specific Styles */
         .contact-hero {
             min-height: 40vh;
             display: flex;
@@ -71,62 +71,181 @@
             flex-shrink: 0;
         }
 
-        /* Google Forms iframe styling */
-        .google-form-container {
-            width: 100%;
-            height: 1200px;
-            border: none;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            background: white;
+        /* Custom Form Styles */
+        .form-group {
+            margin-bottom: 2rem;
         }
 
-        .google-form-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
         }
 
-        /* Loading spinner */
-        .form-loading {
+        .required {
+            color: var(--danger);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            transition: all var(--transition-base);
+            font-family: inherit;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-checkbox-group {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 400px;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .form-checkbox {
+            margin-top: 0.25rem;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .form-checkbox-label {
+            font-size: 0.875rem;
+            line-height: 1.6;
             color: var(--text-secondary);
         }
 
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid var(--border-light);
-            border-top-color: var(--secondary);
+        .form-checkbox-label a {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .form-submit {
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        .form-submit .primary-button {
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .form-submit .primary-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 1.5rem;
+        }
+
+        /* Success/Error Messages */
+        .message {
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .success-message {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--danger);
+            color: var(--danger);
+        }
+
+        /* Validation Styles */
+        .form-input.error,
+        .form-select.error,
+        .form-textarea.error {
+            border-color: var(--danger);
+        }
+
+        .field-error {
+            display: none;
+            font-size: 0.875rem;
+            color: var(--danger);
+            margin-top: 0.25rem;
+        }
+
+        .field-error.show {
+            display: block;
+        }
+
+        /* Loading State */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid var(--secondary);
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin-bottom: 1rem;
+            margin-right: 0.5rem;
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
-        /* Alternative CTA */
-        .alternative-cta {
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Alternative Methods */
+        .alternative-methods {
             text-align: center;
-            margin-top: 2rem;
-            padding: 2rem;
-            background: var(--bg-tertiary);
-            border-radius: var(--radius-lg);
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border-light);
         }
 
-        .alternative-cta h3 {
+        .alternative-methods h3 {
             font-size: 1.25rem;
             margin-bottom: 1rem;
             color: var(--primary);
         }
 
-        .alternative-cta p {
+        .alternative-methods p {
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
         }
@@ -142,6 +261,9 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-lg);
             color: var(--secondary);
             text-decoration: none;
             font-weight: 500;
@@ -150,6 +272,8 @@
 
         .contact-method:hover {
             transform: translateY(-2px);
+            box-shadow: var(--shadow);
+            background: var(--bg-secondary);
         }
 
         @media (max-width: 768px) {
@@ -157,8 +281,8 @@
                 padding: 2rem 1.5rem;
             }
 
-            .google-form-container {
-                height: 1400px;
+            .form-row {
+                grid-template-columns: 1fr;
             }
 
             .contact-hero {
@@ -168,5 +292,10 @@
             .contact-methods {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .contact-method {
+                width: 100%;
+                justify-content: center;
             }
         }
